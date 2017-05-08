@@ -71,7 +71,7 @@ class SecureOperation(object):
         logger.debug('... Security: %s', self.security, extra=vars(self))
         if self.security:
             if len(self.security) > 1:
-                logger.warning("... More than one security requirement defined. **IGNORING SECURITY REQUIREMENTS**",
+                logger.debug("... More than one security requirement defined. **IGNORING SECURITY REQUIREMENTS**",
                                extra=vars(self))
                 return security_passthrough
 
